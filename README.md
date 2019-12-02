@@ -1,4 +1,4 @@
-# RISCV Disk Images
+# MARSS-RISCV Disk Images
 
 This repository contains 32-bit and 64-bit RISC-V Linux disk images and bootloaders to be used with [MARSS-RISCV](https://github.com/bucaps/marss-riscv).
 
