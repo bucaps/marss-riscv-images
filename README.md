@@ -1,7 +1,6 @@
 # RISCV Disk Images
 
-This repository contains a series of disk images, kernels and
-riscvemu configurations for development purposes.
+This repository contains 32-bit and 64-bit RISC-V Linux disk images and bootloaders to be used with [MARSS-RISCV](https://github.com/bucaps/marss-riscv).
 
 # Prerequisites
 
@@ -11,7 +10,7 @@ riscvemu configurations for development purposes.
   distro-specific installation instructions.
 
 - Although the disk images are generic, the kernel + bootloader is
-  meant to be used with riscvemu. See https://bellard.org/riscvemu/
+  meant to be used wit [MARSS-RISCV](https://github.com/bucaps/marss-riscv) and temu. See https://bellard.org/temu/
   for more details.
 
 - The disk images need to be decompressed using xz which is part of
@@ -39,9 +38,9 @@ started:
   ```
   $ xz -d -k -T 0 riscv32.img.xz
   ```
-- Run riscvemu using the provided config file
+- Run MARSS-RISCV using the provided config file
   ```
-  $ riscvemu32 riscvemu.cfg
+  $ marss-riscv riscvemu.cfg
   ```
 
 Note that the file system on the disk image has almost no space. To
@@ -72,9 +71,9 @@ grow the file system follow the steps below:
   # losetup -d /dev/loop0
   ```
 
-Riscvemu does not propagate file changes to the disk image by default
+MARSS-RISCV does not propagate file changes to the disk image by default
 and discards them upon shutdown. For persistency, pass `-rw` to
-riscvemu on the command line.
+marss-riscv on the command line.
 
 # Available Configurations
 
